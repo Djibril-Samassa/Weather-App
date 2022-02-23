@@ -1,25 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import {creatContext, useState} from "react";
+import Homepage from "./Pages/Home";
+import Favorites from "./Pages/Favorites";
+import { BrowserRouter, Link, Switch, Route } from 'react-router-dom/cjs/react-router-dom.min';
 
-function App() {
+export default function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <BrowserRouter>
+      {/*Création du Header*/}
+      <header className='header'>
+      <h2 className='title'>WEATHER APP</h2>
+      <nav className='navbar'>
+        <Link className="link" to="/">Acceuil</Link>
+        <Link className="link" to="/favorites">Favoris</Link>
+      </nav>
+    </header>
 
-export default App;
+    {/*Renseignement des liens */}
+    <Switch>
+      <Route exact path="/" component={Homepage}/>
+      <Route exact path="/favorites" component={Favorites}/>
+    </Switch>
+
+    {/* Création du footer*/}
+    <footer className='footer'>
+      <h3>Développé par Djibril Samassa 23/02/2022</h3>
+    </footer>
+
+    </BrowserRouter>
+  );
+
+}
