@@ -15,7 +15,7 @@ export default function App() {
 
   const value = {
     cityName : cityName,
-    setName : setName
+    setName : setName,
   };
 
   return (
@@ -23,6 +23,7 @@ export default function App() {
 
     <CityContext.Provider value={value}>
       <BrowserRouter>
+      {/*Création du Header*/}
       <header className='header'>
             <h2 className='title'>WEATHER APP</h2>
             <nav className='navbar'>
@@ -36,7 +37,6 @@ export default function App() {
         <Route exact path="/" component={Homepage}/>
         <Route exact path="/favorites" component={Favorites}/>
       </Switch>
-      {/*Création du Header*/}
 
     {/* Création du footer*/}
     <footer className='footer'>
