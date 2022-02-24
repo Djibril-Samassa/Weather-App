@@ -1,8 +1,8 @@
 form{
     margin: 0 auto;
-    width: 250px;
     text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
@@ -10,41 +10,51 @@ form{
     text-align: center;
 }
 
-#inputt {
-    background-color: lightgray;
-    color:black;
-    border: 1px solid black;
-    border-radius: 2px;
-    transform: scale(1), color;
-    transition-duration: 300ms;
-}
-
-#inputt:hover{
-    transform: scale(1.1);
-    background-color: rgb(92, 194, 92);
-    cursor: pointer;
-}
-
 .fav{
-    margin: 5px auto;
-    display: flex;
+    font-size: 20px;
+    width:250px;
+    margin: 10px auto;
+    text-align: center;
     background-color: lightgray;
     color:black;
     border: 1px solid black;
-    border-radius: 2px;
+    border-radius: 15px;
     transform: scale(1), color;
-    transition-duration: 300ms;
+    transition-duration: 50ms;
 }
 
 .fav:hover{
     transform: scale(1.1);
-    background-color: rgb(202, 78, 66);
+    background: linear-gradient(
+    rgba(0, 0, 0, 0.85), 
+    rgba(0, 0, 0, 0.85)
+    );
+    color:lightgray;
+    cursor: pointer;
 }
 
-.citySeacrhInput:hover{
-    cursor: pointer;
+#citySearchInput{
+    font-size: 20px;
+    width:350px;
+    margin: 10px auto;
+    text-align: center;
+    border:none;
+    height: 2em;
+    border-radius: 25px;
+}
+
+#citySearchInput:focus{
+    outline: 2px solid black;
 }
 
 button{
     cursor: pointer;
+}
+
+.container{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
