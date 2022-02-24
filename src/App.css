@@ -32,11 +32,16 @@ body{
   text-decoration: none;
   padding: 10px;
   transform: scale(1);
-  transition-duration: 300ms;
+  transition-duration: 50ms;
 }
 
 .link:hover{
   transform: scale(1.1);
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.85), 
+    rgba(0, 0, 0, 0.85)
+  );
+  color:lightgray
 }
 
 .footer{

@@ -11,7 +11,7 @@ export default function App() {
 
   const setName = (name) => {
     setcityName(name)
-}
+  }
 
   const value = {
     cityName : cityName,
